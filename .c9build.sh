@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 sudo apt-get install pylint
 
 # Code Analysis
