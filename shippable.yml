@@ -3,22 +3,18 @@ language: python
 python:
   - "2.7.6"
 
-env:
-  global:
-   - secure: fmnjo4w31dWiBiCE52YfvBN+OGcIopLy1QeCF9swK/ZoIVNE8VmSV6q2Od7xSBwjXFHdTp5CII5uwjkRUey/Sq4CoCIGmpxOUkopfWdi+U/x84uAt53bgpx8dTIwe/5P+B28XOHSClUv1ZD5QaU8hw/daAZZ8RhsqXdH4orSm5fjL69apFfBdVVY4h7UHTczKIe+gxJGV8hom7XArUUmpNxsoztdDZlgAtYFv1D2QJu5OiNt0QB6fqvBdjzr2Bziqbzn//ldf6KCapEBgfmdFyqfNy0iHr7nBcQDjr/SgsxJYaLgbwWAFB7ANfsgSzNt0qha59VqD9MJ4iIjciNF2A==
-
 build:
  ci:
+  - mkdir -p $HOME/bin
+  - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C $HOME/bin
+  - testspace config url samples.testspace.com
   - sudo pip install -r requirements.txt
   - sudo apt-get install pylint
   - pylint stock_alerter/ -f parseable > analysis.txt || true
   - nose2 --junit-xml --with-coverage 
 
-# Requires TESTSPACE_TOKEN environment variable. 
  on_success:
-   - curl -s https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | sudo tar -zxvf- -C /usr/local/bin
-   - testspace @.testspace.txt $TESTSPACE_TOKEN/${SHIPPABLE_REPO_SLUG/\//:}/${BRANCH}#ship.Build.${BUILD_NUMBER}
-
+  - testspace analysis.txt{lint} nose2.xml{stock_alerter} coverage.xml
+  
  on_failure:
-   - curl -s https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | sudo tar -zxvf- -C /usr/local/bin
-   - testspace @.testspace.txt $TESTSPACE_TOKEN/${SHIPPABLE_REPO_SLUG/\//:}/${BRANCH}#ship.Build.${BUILD_NUMBER}
+  - testspace analysis.txt{lint} nose2.xml{stock_alerter} coverage.xml
