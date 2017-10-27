@@ -3,4 +3,6 @@ enum
 mock==2.0.0
 nose2
 six==1.10.0
+pytest
+pytest-cov
 unittest2
