@@ -2,11 +2,8 @@ from __future__ import print_function
 import smtplib
 import unittest2 as unittest
 import mock
-import pytest
 
 from ..action import EmailAction, PrintAction
-
-pytestmark = pytest.mark.skip(reason="whatever")
 
 class MessageMatcher:
     def __init__(self, expected):
@@ -37,7 +34,7 @@ class PrintActionTest(unittest.TestCase):
         action.execute("GOOG > $10")
         mock_print.assert_called_with("GOOG > $10")
 
-#@pytest.mark.skip(reason="whatever")
+
 class EmailActionTest(unittest.TestCase):
     def setUp(self):
         patcher = mock.patch("smtplib.SMTP")
