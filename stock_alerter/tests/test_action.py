@@ -2,6 +2,7 @@ from __future__ import print_function
 import smtplib
 import unittest2 as unittest
 import mock
+import pytest
 
 from ..action import EmailAction, PrintAction
 
