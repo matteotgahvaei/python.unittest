@@ -16,4 +16,4 @@ script:
   - tox -e py
 
 after_script:
-  - testspace flake8.txt{lint} testresults.xml{stock_alerter} coverage.xml
+  - testspace flake8.txt{lint} testresults.xml{stock_alerter} coverage.xml +testresults.xml
