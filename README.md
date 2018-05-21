@@ -23,9 +23,9 @@ Using Multiple Online CI Services:
 ***
 Publishing **Test Content** using www.testspace.com.
 
-[![Space Health](https://samples.testspace.com/spaces/759/badge?token=2b415e73ed35943961c25a0d451ed41da64b029e)](https://samples.testspace.com/spaces/759 "Test Cases")
-[![Space Metric](https://samples.testspace.com/spaces/759/metrics/685/badge?token=b4e77a71c198ade1720e3452e1ba684c59d70dde)](https://samples.testspace.com/spaces/759/schema/Code%20Coverage "Code Coverage (lines)")
-[![Space Metric](https://samples.testspace.com/spaces/759/metrics/686/badge?token=ed591f894dacb99be130ff1f0a71e7b5a5c58e65)](https://samples.testspace.com/spaces/759/schema/Static%20Analysis "Static Analysis (issues)")
+[![Space Health](https://samples.testspace.com/spaces/757/badge?token=61c13f97c367398a2b23fcbff3d7dc4ff8980f94)](https://samples.testspace.com/spaces/757?utm_campaign=badge&utm_medium=referral&utm_source=test "Test Cases")
+[![Space Metric](https://samples.testspace.com/spaces/757/metrics/683/badge?token=116815d4171e04500825d50efd8faae6795a50dd)](https://samples.testspace.com/spaces/757/schema/Code%20Coverage?utm_campaign=badge&utm_medium=referral&utm_source=coverage "Code Coverage (lines)")
+[![Space Metric](https://samples.testspace.com/spaces/757/metrics/684/badge?token=ccdfd31aa029f081c99f3b2748b7fa3714de4410)](https://samples.testspace.com/spaces/757/schema/Static%20Analysis?utm_campaign=badge&utm_medium=referral&utm_source=analysis "Static Analysis (issues)")
 
 *** 
 
