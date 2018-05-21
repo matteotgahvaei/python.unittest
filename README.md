@@ -17,7 +17,7 @@ Using Multiple Online CI Services:
 
 [![Build Status](https://travis-ci.org/testspace-samples/php.phpunit.svg?branch=master)](https://travis-ci.org/testspace-samples/python.unittest)
 [![CircleCI](https://circleci.com/gh/testspace-samples/python.unittest.svg?style=svg)](https://circleci.com/gh/testspace-samples/python.unittest)
-[![Run Status](https://api.shippable.com/projects/5710a3e02a8192902e1c1f8d/badge?branch=master)](https://app.shippable.com/github/testspace-samples/python.unittest)
+[![Run Status](https://api.shippable.com/projects/5a1068f96301ee07008b7aa0/badge?branch=master)](https://app.shippable.com/github/testspace-samples/python.unittest)
 
 
 ***
