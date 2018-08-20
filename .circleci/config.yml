@@ -4,6 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/python:2.7-stretch-browsers
+
     steps:
       - checkout
       - run: "curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | sudo tar -zxvf- -C /usr/local/bin"
