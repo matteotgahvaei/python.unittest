@@ -13,8 +13,5 @@ build:
   - pylint stock_alerter/ -f parseable > analysis.txt || true
   - nose2 --junit-xml --with-coverage 
 
- on_success:
-  - testspace analysis.txt{lint} nose2.xml{stock_alerter} coverage.xml
-  
- on_failure:
+ always:
   - testspace analysis.txt{lint} nose2.xml{stock_alerter} coverage.xml
